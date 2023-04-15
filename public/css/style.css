@@ -1,0 +1,123 @@
+/* author: HTL Leonding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Agency FB';
+    font-size: 150%;
+    background-color: #CDE7DF;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* header */
+header {
+    background-color: #6BBDA4;
+    color: #1E3E34;
+    padding: 2% 0;
+    display: flex;
+}
+header h1 {
+    flex: 3;
+    text-align: center;
+    margin: 0;
+}
+header a {
+    flex: 1;
+    margin: 1% 5% 1% 0;
+    padding: 1%;
+    display: block;
+    text-align: center;
+    background-color: #CDE7DF;
+    color: #000;
+    text-decoration: none;
+}
+header a:hover {
+    background-color: #aae2d1;
+}
+
+
+
+/* main */
+main {
+    padding: 2%;
+}
+main a {
+    display: inline-block;
+    margin-right: 2em;
+    color: #1E3E34;
+    background-color: #6BBDA4;
+    padding: 1em;
+    text-decoration: none;
+}
+main a:hover {
+    background-color: #479E84;
+}
+
+
+
+/* galerie */
+main #galery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+main #galery img {
+    display: block;
+    width: 30%;
+    margin-bottom: 3%;
+}
+
+
+
+/* to-do list*/
+main #erg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main #erg .item {
+    width: 25%;
+    color: #1E3E34;
+    background-color: #6BBDA4;
+    padding: 1em;
+    margin: 2%;
+}
+
+/* to-do list: form*/
+main #new {
+    border-bottom: 2px solid #6BBDA4;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+main #new form {
+    text-align: center;
+}
+main #new input, main #new div {
+    font-size: 1rem;
+    display: inline-block;
+    padding: 1em;
+    margin-right: 1em;
+    background-color: #fff;
+    border: 2px inset #CDE7DF;
+}
+main #new input:focus {
+    border-color: #6BBDA4;
+}
+main #new div {
+    border-style: outset;
+}
+main #new div:hover {
+    cursor: pointer;
+    background-color: #aae2d1;
+}
+main #new #form-message {
+    border-left: 2px solid #6BBDA4;
+}
+main #new #form-message:hover {
+    cursor: initial;
+    background-color: #fff;
+}
+main #new #form-message p {
+    margin: 0;
+}
