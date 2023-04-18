@@ -18,12 +18,12 @@ const jsonpath = "./src/mytodos.json";
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/index', (req, res) => {
+app.get('/todo', (req, res) => {
     let answer = JSON.stringify(ToDoList.list);
     res.send(answer);
 });
 
-app.post('/index', (req, res) => {
+app.post('/todo', (req, res) => {
     let patt1 = /[A-z]/; ///^([A-z.,!]+\s*)+$/
     let patt2 = /^[A-z]{3,15}$/;
     let patt3 = /^\d\d\.\d\d\.(\d\d)*(\d\d)*$/;
@@ -89,11 +89,11 @@ class ToDo {
 }
 
 let ToDoList = new ToDo();
-ToDoList.addTask("MEDT Highscore", "Donnerstag", "10.03.2022");
-ToDoList.addTask("MEDT Projekt", "Donnerstag", "17.03.2022");
-ToDoList.addTask("SYT HÜ", "Mittwoch", "30.03.2022");
-ToDoList.addTask("English", "Dienstag", "07.05.2022");
-ToDoList.addTask("Mathe", "Montag", "01.01.2023");
+// ToDoList.addTask("MEDT Highscore", "Donnerstag", "10.03.2022");
+// ToDoList.addTask("MEDT Projekt", "Donnerstag", "17.03.2022");
+// ToDoList.addTask("SYT HÜ", "Mittwoch", "30.03.2022");
+// ToDoList.addTask("English", "Dienstag", "07.05.2022");
+// ToDoList.addTask("Mathe", "Montag", "01.01.2023");
 
 if (fs.existsSync(jsonpath)) {
     fs.readFile(jsonpath, 'utf8', (error, data_String) => {

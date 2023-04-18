@@ -4,11 +4,13 @@
   "description": "A ToDo-app created with Express and the FS-module to save the ToDos locally.",
   "main": "todo.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon todo.js"
   },
-  "author": "",
+  "author": "Jonas Froeller",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "nodemon": "^2.0.22"
   }
 }

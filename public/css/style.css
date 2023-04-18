@@ -6,6 +6,7 @@ body {
     font-size: 150%;
     background-color: #CDE7DF;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -17,11 +18,13 @@ header {
     padding: 2% 0;
     display: flex;
 }
+
 header h1 {
     flex: 3;
     text-align: center;
     margin: 0;
 }
+
 header a {
     flex: 1;
     margin: 1% 5% 1% 0;
@@ -32,6 +35,7 @@ header a {
     color: #000;
     text-decoration: none;
 }
+
 header a:hover {
     background-color: #aae2d1;
 }
@@ -42,6 +46,7 @@ header a:hover {
 main {
     padding: 2%;
 }
+
 main a {
     display: inline-block;
     margin-right: 2em;
@@ -50,6 +55,7 @@ main a {
     padding: 1em;
     text-decoration: none;
 }
+
 main a:hover {
     background-color: #479E84;
 }
@@ -62,6 +68,7 @@ main #galery {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 main #galery img {
     display: block;
     width: 30%;
@@ -73,9 +80,10 @@ main #galery img {
 /* to-do list*/
 main #erg {
     display: flex;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
+
 main #erg .item {
     width: 25%;
     color: #1E3E34;
@@ -86,13 +94,15 @@ main #erg .item {
 
 /* to-do list: form*/
 main #new {
-    border-bottom: 2px solid #6BBDA4;
+    border-bottom: 2px solid #ffffff;
     padding-bottom: 1em;
     margin-bottom: 1em;
 }
+
 main #new form {
     text-align: center;
 }
+
 main #new input, main #new div {
     font-size: 1rem;
     display: inline-block;
@@ -101,23 +111,35 @@ main #new input, main #new div {
     background-color: #fff;
     border: 2px inset #CDE7DF;
 }
+
 main #new input:focus {
     border-color: #6BBDA4;
 }
+
 main #new div {
     border-style: outset;
 }
+
 main #new div:hover {
     cursor: pointer;
     background-color: #aae2d1;
 }
+
 main #new #form-message {
     border-left: 2px solid #6BBDA4;
 }
+
 main #new #form-message:hover {
     cursor: initial;
     background-color: #fff;
 }
+
 main #new #form-message p {
     margin: 0;
+}
+
+/* utility */
+.flex {
+    display: flex;
+    justify-content: center;
 }

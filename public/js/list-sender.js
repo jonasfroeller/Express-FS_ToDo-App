@@ -1,13 +1,19 @@
 // post new task with AJAX request
 function postTask() {
-    let taskNew = document.getElementById('form-task').value;
-    let dayNew = document.getElementById('form-day').value;
-    let dateNew = document.getElementById('form-date').value;
+    let host = "";
+    if (window.location.hostname === "localhost") {
+        host = "http://localhost:3000";
+    } else {
+        host = "https://express-fs-todo-app.glitch.me"; 
+    }
 
-    let postData = `task=${taskNew}&date=${dateNew}&day=${dayNew}`;
-    const date1 = new Date();
+    const taskNew = document.getElementById('form-task').value;
+    const dayNew = document.getElementById('form-day').value;
+    const dateNew = document.getElementById('form-date').value;
 
-    fetch('http://localhost:3000/todo', {
+    const postData = `task=${taskNew}&date=${dateNew}&day=${dayNew}`;
+
+    fetch(`${host}/todo`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
